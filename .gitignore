@@ -1,0 +1,29 @@
+#En los .gitignore podemos configurar los archivos que deben ser ignorados al realizar commits. La razon por la que el archivo empieza con . (.gitignore) es porque es un archivo oculto
+# 1. Ignorar la subcarpeta folder2.2 que está dentro de folder2
+folder2/folder2.2/
+
+# 2. Ignorar todos los .html excepto uno específico dentro de folder1
+# Primero: ignoramos los .html de la carpeta
+folder1/*.html
+
+# Segundo: creamos la excepción
+!folder1/folder1.html
+
+#3.Ignorar todos los archivos que esten en alguna carpeta o subcarpeta (**)
+**/copy.js
+
+#4.Ignorar archivos concretos con nombres parecidos mediante un rango
+folderwithnumbers/file[1-3].txt
+#Ignora los archivos que empiecen por file y que continuen con 1,2 o 3 y terminen en txt
+
+#5.Ignorar archivos con nombres parecidos mediante extensiones
+niñs/niñ[oa]s
+#Ignora las subcarpeta dentro de la carpeta niñs que empiezan por niñ, seguido de una o o una a y acaban por s
+
+#6.Uso del interrogante para indicar un caracter variable
+ignoredwith?/file?.txt
+#Ignora los archivos que empiezan por file seguidos de 1 caracter y acaban en .txt, no ignora los archivos como file11.txt
+
+#7.Uso de gitkeep para respetar directorios vacios. De normal los directorios vacios no se suben al repositorio cuando hacemos un commit por lo que podemos usar gitkeep y gitignore para hacer que esto no pase.
+!niñs/.gitkeep 
+#De normal no sale la carpeta niñs porque todas sus subcarpetas estan vacias. De esta forma ignoramos eso.
