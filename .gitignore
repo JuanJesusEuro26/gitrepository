@@ -26,4 +26,4 @@ ignoredwith?/file?.txt
 
 #7.Uso de gitkeep para respetar directorios vacios. De normal los directorios vacios no se suben al repositorio cuando hacemos un commit por lo que podemos usar gitkeep y gitignore para hacer que esto no pase.
 !niñs/.gitkeep 
-#De normal no sale la carpeta niñs porque todas sus subcarpetas estan vacias. De esta forma ignoramos eso.
+#De normal no sale la carpeta niñs porque todas sus subcarpetas estan vacias. De esta forma saldrá porque incluimos en ella .gitkeep (sus subcarpetas no salen porque tambien estan vacias)
